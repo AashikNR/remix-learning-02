@@ -7,6 +7,7 @@ import {
 } from "@remix-run/react";
 
 import sharedStyles from "./styles/shared.css";
+import ExpensesHeader from "./components/navigation/ExpensesHeader"
 
 export function Layout({ children }) {
   return (
@@ -28,6 +29,8 @@ export function Layout({ children }) {
         <Links />
       </head>
       <body>
+        {/* <ExpensesHeader/> */}
+        {/* <MainHeader/> */}
         {children}
         <ScrollRestoration />
         <Scripts />

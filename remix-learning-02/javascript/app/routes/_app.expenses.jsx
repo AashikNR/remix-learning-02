@@ -1,8 +1,20 @@
-// import expensesStyles from "../styles/expenses.css";
 import ExpenseList from "../components/expenses/ExpensesList";
+import { Outlet } from "@remix-run/react";
+// import expensesStyles from "../styles/expenses.css";
+
+// export function links() {
+//   return [{ rel: "stylesheet", href: expensesStyles }];
+// }
 
 export default function Expense() {
-  return <ExpenseList expenses={DUMMY_DATA} />;
+  return (
+    <>
+      <Outlet />
+      <main>
+        <ExpenseList expenses={DUMMY_DATA} />
+      </main>
+    </>
+  );
 }
 
 const DUMMY_DATA = [
@@ -20,6 +32,3 @@ const DUMMY_DATA = [
   },
 ];
 
-// export function links() {
-//   return [{ rel: "stylesheet", href: expensesStyles }];
-// }

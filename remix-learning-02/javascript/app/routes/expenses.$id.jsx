@@ -1,10 +1,15 @@
 import ExpenseForm from "../components/expenses/ExpenseForm";
-import expensesStyles from "../styles/expenses.css";
-
-export function links() {
-  return [{ rel: "stylesheet", href: expensesStyles }];
-}
+import Modal from "../components/util/Modal";
+import { useNavigate } from "@remix-run/react";
 
 export default function Index() {
-  return <ExpenseForm />;
+  const navigate = useNavigate();
+  function closeHandler() {
+    navigate("..");
+  }
+  return (
+    <Modal onClose={closeHandler}>
+      <ExpenseForm />
+    </Modal>
+  );
 }

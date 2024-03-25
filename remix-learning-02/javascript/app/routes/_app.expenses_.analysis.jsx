@@ -1,10 +1,10 @@
 import ExpenseStatistics from "../components/expenses/ExpenseStatistics";
 import Chart from "../components/expenses/Chart";
-import expensesStyles from "../styles/expenses.css";
+// import expensesStyles from "../styles/expenses.css";
 
-export function links() {
-  return [{ rel: "stylesheet", href: expensesStyles }];
-}
+// export function links() {
+//   return [{ rel: "stylesheet", href: expensesStyles }];
+// }
 
 const DUMMY_DATA = [
   {
